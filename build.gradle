@@ -4,6 +4,8 @@ buildscript {
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.3.RELEASE")
+		classpath("org.projectreactor:reactor-spring:1.0.1.RELEASE")
+        
     }
 }
 
@@ -31,6 +33,8 @@ repositories {
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.springframework.boot:spring-boot-starter-actuator")
+    compile group: 'org.projectreactor', name: 'reactor-spring', version: '1.0.1.RELEASE'
+    testCompile group: 'io.projectreactor', name: 'reactor-test', version: '3.1.8.RELEASE'
     testCompile("org.springframework.boot:spring-boot-starter-test")
     testCompile("junit:junit")
 }
